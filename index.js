@@ -154,7 +154,7 @@ const cartFunctionality = (plant) => {
               <p class="font-bold">${plantName}</p>
               <p class="text-gray-500 font-semibold">৳ ${plantPrice}  × 1</p>
             </div>
-            <button id="removeBtn" class="cursor-pointer pr-3">X</button>
+            <button id="removeBtn" class="cursor-pointer pr-3 hover:text-red-700 font-bold text-4xl">❌</button>
           </div>
   `;
   cartArr += plantPrice;
