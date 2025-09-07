@@ -12,6 +12,19 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      @keyframes progress {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .progress-bar {
+        animation: progress 3s ease-in-out infinite;
+      }
+    </style>
   </head>
   <body class="bg-green-50">
     <!-- Navbar Start -->
@@ -52,7 +65,7 @@
         </div>
         <!-- First Image Section End -->
 
-        <!-- Middel Content Start -->
+        <!-- Middle Content Start -->
         <div class="text-center">
           <p class="md:text-5xl text-3xl font-bold text-gray-900 pt-7 md:pt-0">
             Plant a Treee, Grow a Future
@@ -65,7 +78,7 @@
             Get Involved
           </button>
         </div>
-        <!-- Middel Content End -->
+        <!-- Middle Content End -->
 
         <!-- Second Image Section Start -->
         <div class="mt-auto hidden md:block">
@@ -78,9 +91,9 @@
 
     <!-- Choose Your Trees Section Start -->
     <p class="text-center md:text-4xl font-bold py-5">Choose Your Trees</p>
-    <div id="spinner" class="w-full text-center">
+    <!-- <div id="spinner" class="w-full text-center">
       <span class="loading loading-dots loading-xl"></span>
-    </div>
+    </div> -->
     <div class="grid grid-cols-10 md:grid-cols-12 px-5 gap-3">
       <!-- Categories Section Start -->
       <div class="md:col-span-2 col-span-4 h-6">
@@ -98,7 +111,50 @@
 
       <!-- Card Section Start -->
 
-      <div id="cardSection" class="grid col-span-8 md:grid-cols-3 gap-3"></div>
+      <div
+        id="cardSpinnerSection"
+        class="grid col-span-8 md:grid-cols-3 gap-3 min-h-dvh"
+      >
+        <!-- Spinner Div Start -->
+        <div
+          id="spinner"
+          class="from-red-50 to-green-70000 md:h-72 h-80 flex justify-center w-full col-span-12 text-center"
+        >
+          <div class="bg-white rounded-xl shadow-lg p-8 max-w-md w-full mx-4">
+            <div class="text-center">
+              <!-- Progress Bar -->
+              <div class="h-2 rounded-full overflow-hidden mb-6">
+                <div
+                  class="progress-bar h-full bg-gradient-to-r from-green-200 to-green-700"
+                ></div>
+              </div>
+
+              <!-- Spinner -->
+              <div class="flex justify-center mb-6">
+                <div
+                  class="animate-spin rounded-full h-16 w-16 border-4 border-green-200 border-t-green-500"
+                ></div>
+              </div>
+
+              <!-- Loading Text -->
+
+              <h2 class="text-2xl font-semibold text-gray-800 mb-2">
+                Data is loading
+              </h2>
+              <p class="text-gray-500">
+                Please wait while we process your request!
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Spinner Div End -->
+
+        <div
+          id="cardSection"
+          class="grid col-span-12 md:grid-cols-3 gap-3"
+        ></div>
+      </div>
+
       <!-- Card Section End -->
 
       <!-- Your Cart Section Start -->
@@ -161,7 +217,7 @@
           class="grid grid-cols-1 sm:grid-cols-3 gap-8 md:px-16 mt-6 items-stretch"
         >
           <div
-            class="card w-full h-full bg-base-100 card-sm shadow-sm flex flex-col"
+            class="card w-full h-full bg-base-100 card-sm shadow-sm flex flex-col hover:bg-green-300 hover:transition"
           >
             <div
               class="card-body text-center flex flex-col justify-center flex-grow"
@@ -176,7 +232,7 @@
           </div>
 
           <div
-            class="card w-full h-full bg-base-100 card-sm shadow-sm flex flex-col"
+            class="card w-full h-full bg-base-100 card-sm shadow-sm flex flex-col hover:bg-green-300 hover:transition"
           >
             <div
               class="card-body text-center flex flex-col justify-center flex-grow"
@@ -191,7 +247,7 @@
           </div>
 
           <div
-            class="card w-full h-full bg-base-100 card-sm shadow-sm flex flex-col"
+            class="card w-full h-full bg-base-100 card-sm shadow-sm flex flex-col hover:bg-green-300 hover:transition"
           >
             <div
               class="card-body text-center flex flex-col justify-center flex-grow"

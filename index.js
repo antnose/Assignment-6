@@ -1,13 +1,15 @@
 const spinner = document.querySelector("#spinner");
+const spinnerCardSection = document.querySelector("#cardSpinnerSection");
 
 function showSpinner() {
   spinner.classList.remove("hidden");
-  document.querySelector("#cardSection").innerText = ""; // hide cards while loading
+  document.querySelector("#cardSection").innerText = "";
 }
 
 function hideSpinner() {
   spinner.classList.add("hidden");
-  document.querySelector("#cardSection").classList.remove("hidden"); // show cards when done loading
+  document.querySelector("#cardSection").classList.remove("hidden");
+  spinnerCardSection.classList.remove("min-h-dvh");
 }
 
 if (!spinner) {
