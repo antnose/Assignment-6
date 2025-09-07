@@ -66,5 +66,46 @@
       </div>
     </div>
     <!-- Hero Section End -->
+
+    <!-- Choose Your Trees Section Start -->
+    <p class="text-center md:text-4xl font-bold py-5">Choose Your Trees</p>
+    <div id="spinner" class="w-full text-center">
+      <span class="loading loading-dots loading-xl"></span>
+    </div>
+    <div class="grid grid-cols-10 md:grid-cols-12 px-5 md:gap-3 gap-9">
+      <!-- Categories Section Start -->
+      <div class="md:col-span-2 col-span-4 h-6">
+        <p class="font-bold">Categories</p>
+        <ul id="leftBar" class="menu menu-vertical block p-0 w-full pt-4">
+          <button
+            id="allCategories"
+            class="hover:bg-green-400 cursor-pointer w-full text-start font-semibold p-1 rounded"
+          >
+            All Trees
+          </button>
+        </ul>
+      </div>
+      <!-- Categories Section End -->
+
+      <!-- Card Section Start -->
+
+      <div id="cardSection" class="grid col-span-8 md:grid-cols-3 gap-3"></div>
+      <!-- Card Section End -->
+
+      <!-- Your Cart Section Start -->
+      <div class="md:col-span-2 col-span-12 bg-base-100 rounded-2xl px-2">
+        <p class="text-2xl font-bold justify text-center py-4">Your Cart</p>
+        <div id="toggleCartDiv" class="hidden">
+          <div id="cartSection"></div>
+          <hr class="text-gray-400 mt-3" />
+          <div class="flex justify-between">
+            <p>Total:</p>
+            <p>৳ <span id="totalTk"></span></p>
+          </div>
+        </div>
+      </div>
+      <!-- Your Cart Section End -->
+    </div>
+    <!-- Choose Your Trees Section End -->
   </body>
 </html>
